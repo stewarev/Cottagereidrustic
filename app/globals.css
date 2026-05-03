@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 30 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
+    --primary: 158 45% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 30 15% 20%;
+    --muted: 40 20% 93%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 35 85% 55%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 158 45% 30%;
+    --radius: 0.5rem;
+    --chart-1: 158 45% 30%;
+    --chart-2: 35 85% 55%;
+    --chart-3: 210 60% 50%;
+    --chart-4: 280 50% 55%;
+    --chart-5: 0 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Prose styles for markdown content */
+.prose {
+  @apply text-foreground max-w-none;
+}
+.prose h1 { @apply text-2xl font-bold mt-6 mb-3; }
+.prose h2 { @apply text-xl font-semibold mt-5 mb-2; }
+.prose h3 { @apply text-lg font-semibold mt-4 mb-2; }
+.prose p { @apply mb-3 leading-relaxed; }
+.prose ul { @apply list-disc pl-5 mb-3 space-y-1; }
+.prose ol { @apply list-decimal pl-5 mb-3 space-y-1; }
+.prose li { @apply leading-relaxed; }
+.prose strong { @apply font-semibold; }
+.prose code { @apply bg-muted px-1 py-0.5 rounded text-sm font-mono; }
+.prose pre { @apply bg-muted p-4 rounded-lg overflow-x-auto mb-3; }
+.prose pre code { @apply bg-transparent p-0; }
+.prose blockquote { @apply border-l-4 border-primary pl-4 italic text-muted-foreground mb-3; }
+.prose a { @apply text-primary underline underline-offset-2; }
+.prose hr { @apply my-4 border-border; }
